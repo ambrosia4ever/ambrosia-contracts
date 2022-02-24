@@ -560,7 +560,7 @@ contract AmbrosiaRedeemer is Ownable {
 
         
 	}
-	
+	//DAO can redeem AMB at a different tax rate
 	function teamRedeem(uint _amount) external onlyPolicy(){
         require(enabled, "Redemption disabled");
         require(IERC20( AMB ).balanceOf(msg.sender) >= _amount, "Insufficient balance");
